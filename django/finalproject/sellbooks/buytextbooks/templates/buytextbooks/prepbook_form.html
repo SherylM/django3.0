@@ -1,0 +1,16 @@
+{% extends 'buytextbooks/base.html'%}
+<title>{% block title %}  Book Hook - Sell Prepbook  {% endblock%}</title>
+<a class="w3-left-align w3-bar-item w3-button w3-hide-small w3-padding-large {%block linkfour%} w3-padding-large w3-grey{% endblock%}" href="{% url 'books:sell' %}">Sell Books</a>
+
+{% block body %}
+<div class = "container">
+  <form class = "" action = "" method = "post" enctype = "multipart/form-data">
+    {% csrf_token %}<!-- this is for basic security purposes-->
+    {% include 'buytextbooks/form-template.html' %}
+      <div class = "container">
+          <button type = "submit" class = "search"> Submit </button>
+      </div>
+  </form>
+</div>
+
+ {% endblock%}

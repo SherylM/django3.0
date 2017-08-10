@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% extends 'buytextbooks/base.html'%}
+		<title>{%block title %}Book Hook - Login {% endblock %} </title>
+		 <input type="button" class="w3-right w3-button w3-hide-small w3-padding-large {%block linksix%} w3-hover-lime{% endblock%}" onclick="location.href='{% url 'books:login'%}';" value="Login"/>
+	</head>
+<body>
+{% block body%}
+<h2>Login</h2>
+
+<div style="border:1px solid #ccc; width: 80%; margin: 20px;padding: 10px;">
+		<label><b>Username</b></label>
+			<br></br>
+    <input style="margin: 0px 20px 0px 10px;width:50%;"type="text" placeholder="Enter a Username" name="username" required>
+			<br></br>
+    <label><b>Password</b></label>
+			<br></br>
+    <input style="margin: 0px 20px 0px 10px;width: 50%;" type="password" placeholder="Enter Password" name="psw" required>
+			<br></br>
+		<input type="checkbox" checked="checked"> Remember me
+
+
+    <div class="clearfix">
+      <button type="submit" class="Loginbtn">Login</button>
+    </div>
+</div>
+{% endblock%}
+</body>
+</html>

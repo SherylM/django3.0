@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% extends 'buytextbooks/base.html'%}
+    <title>{%block title %}Book Hook - The Nook {% endblock %} </title>
+    <a class="w3-left-align w3-bar-item w3-button w3-hide-small w3-padding-large {%block linkfive%} w3-padding-large w3-grey{% endblock%}" href="{% url 'books:blog' %}">Blog</a>
+  </head>
+
+  <body>
+
+    <p class="w3-xlarge w3-center">{% block header%} The Nook {%endblock%}</p>
+    {%block body%}
+
+        <!-- w3-content defines a container for fixed size centered content,
+        and is wrapped around the whole page content, except for the footer in this example -->
+        <div class="w3-content" style="max-width:1400px">
+
+          <!-- Header -->
+
+
+        <!-- Grid -->
+        <div class="w3-row">
+
+        <!-- Blog entries -->
+        <div class="w3-col l8 s12">
+        <!-- Blog entry -->
+        <div class="w3-card-4 w3-margin w3-white w3-threequarter">
+          <img src="http://s3.amazonaws.com/tgc-blogs/wp-content/uploads/sites/23/2015/06/12160806/reading.jpg" alt="Nature" style="width:100%">
+          <div class="w3-container">
+            <h3><b>Cool Summer Reads</b></h3>
+            <h5>Awesome Books of 2017, <span class="w3-opacity">August 4, 2017</span></h5>
+          </div>
+      <div class="w3-container">
+          <div>
+          <input type="checkbox" class="read-more-state" id="post-1" />
+          <p class="read-more-wrap">We have some super cool books for you to try out. Read them and let us know what you think.<br> <span class="read-more-target">
+         - Carve the Mark by Veronica Roth<br>
+         -City of Saints and Thieves by Natalie C. Anderson<br>
+         -We Are Okay by Nina LaCour<br>
+         -Camp So-and-So by Mary McCoy
+      </span></p>
+          <label for="post-1" class="read-more-trigger"></label>
+      </div>
+
+      <style>
+                .read-more-state {
+                  display: none;
+                }
+
+                .read-more-target {
+                  opacity: 0;
+                  max-height: 0;
+                  font-size: 0;
+                  transition: .25s ease;
+                }
+
+                .read-more-state:checked ~ .read-more-wrap .read-more-target {
+                  opacity: 1;
+                  font-size: inherit;
+                  max-height: 999em;
+                }
+
+                .read-more-state ~ .read-more-trigger:before {
+                  content: 'Show more';
+                }
+
+                .read-more-state:checked ~ .read-more-trigger:before {
+                  content: 'Show less';
+                }
+
+                .read-more-trigger {
+                  cursor: pointer;
+                  display: inline-block;
+                  padding: 0 .5em;
+                  color: #666;
+                  font-size: .9em;
+                  line-height: 2;
+                  border-radius: .25em;
+                }
+        </style>
+
+ <div class="w3-row">
+        <div class="w3-col m8 s12">
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white w3-threequarter">
+  <img src="http://www.gowaynecounty.com/blog/wp-content/uploads/2015/07/back-to-school.jpg" alt="Norway" style="width:100%">
+    <div class="w3-container">
+      <h3><b>Back-to-School Checklist</b></h3>
+      <h5>Are You Ready for School?, <span class="w3-opacity">August 4, 2017</span></h5>
+    </div>
+
+    <div class="w3-container">
+    <input type="checkbox" class="read-more-state" id="post-2" />
+    <p class="read-more-wrap">With the summer wrapping up, it's time to prep for the start of the school year. Do you have all your supplies? Use this checklist:<br>
+    <span class="read-more-target">
+    - 4-5 Pencils<br>
+    - 2-3 Pens (Black, Blue, Red)<br>
+    - Highlighters<br>
+    - Color Pencils<br>
+    - Binder/Portfolio/Folders<br>
+    - Notebooks
+</span></p>
+    <label for="post-2" class="read-more-trigger"></label>
+<style>
+.read-more-state {
+  display: none;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Show more';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Show less';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #666;
+  font-size: .9em;
+  line-height: 2;
+  border-radius: .25em;
+}
+
+</style>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card-2 w3-margin w3-margin-top w3-rest">
+  <style="width:100%">
+    <div class="w3-container w3-white">
+      <h4><b>About Our Blog</b></h4>
+      <p>Welcome to our blog: The Book Hook Nook! We keep you up-to-date on almost everything from new books, school, and fun activities to try. We are constantly updating material on the blog, so stay tuned!</p>
+    </div>
+  </div><hr>
+  </div>
+  <!-- Posts -->
+  <div class="w3-card-2 w3-margin w3-rest">
+    <div class="w3-container w3-padding">
+      <h4>Popular Posts</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="/w3images/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Lorem</span><br>
+        <span>Sed mattis nunc</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="/w3images/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Ipsum</span><br>
+        <span>Praes tinci sed</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="/w3images/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Dorum</span><br>
+        <span>Ultricies congue</span>
+      </li>
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+        <img src="/w3images/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Mingsum</span><br>
+        <span>Lorem ipsum dipsum</span>
+      </li>
+    </ul>
+  </div>
+  <hr>
+
+
+
+
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+
+
+{%endblock%}
+</body>
+</html>

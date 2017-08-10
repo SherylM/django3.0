@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% extends 'buytextbooks/base.html'%}
+		<title>{% block title%} Book Hook - Sell A Book {% endblock %}</title>
+		<a class="w3-left-align w3-bar-item w3-button w3-hide-small w3-padding-large {%block linkfour%} w3-padding-large w3-grey{% endblock%}" href="{% url 'books:sell' %}">Sell Books</a>
+		<h1>Sell Books</h1>
+  </head>
+
+<body>
+	<p class="w3-xlarge w3-center">{% block header%} Sell A Book! {%endblock%}</p>
+	{% block body %}
+			<a style = "font-size: 34px; background-color: #ABDB25; margin: 50px 100px; padding : 10px 100px" href = "{% url 'books:textbook-add' %}">Sell Textbook</a>
+			<a style = "font-size: 34px; background-color: #ABDB25; margin: 50px 100px; padding : 10px 100px" href = "{% url 'books:prepbook-add' %}">Sell Prepbook</a>
+	{% endblock %}
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      {% extends 'buytextbooks/base.html'%}
+      <title>{%block title %}Book Hook - Homepage{% endblock %} </title>
+      <a href="home.html" class="w3-bar-item w3-button w3-hide-small {%block linkone%} w3-padding-large w3-grey{% endblock %}">Home</a>
+  </head>
+
+<body>
+  {%block body %}
+  <!--Search box/First Grid-->
+  <div class="w3-row-padding w3-padding-64 w3-container w3-half">
+    <div class="w3-content">
+      <div class = "container">
+        <h1>Find Your Book!</h1>
+            <form role = "search" method = "get" action = "#">
+                <input type = "text" placeholder= " book title, author, etc EX: SAT prep " class = "searchbox" name = "q" value = "">
+                <button type = "submit"> Search </button>
+            </form>
+        <h1> News! </h1>
+            <h5> Check out our Blog! :):):):) </h5>
+            <h5> We don't have a Launch day yet but it will come soon ;)</h5>
+            <h5> Contact Us!! </h5>
+            <ul>
+              <li>Sheryl M: sherylm2001@gmail.com</li>
+              <li>Aishwary S: aishwaryashankar17@gmail.com</li>
+              <li>Rachel L: rachelliu29@gmail.com</li>
+              <li>Emma K: emh1@gmail.com</li>
+            </ul>
+            <h5> Our Website is awESoMe!! 10/10 wOUld rEcOMMeNd</h5>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Grid -->
+  <div class="w3-row-padding w3-padding-64 w3-container w3-half">
+    <div class="w3-content">
+      <div class="w3-left">
+        <h1>About Us</h1>
+        <h5 class="w3-padding-32">
+            Welcome to Book Hook! We're glad that you chose our platform to sell your books through. Now, a little bit about us: <br>
+            The Book Hook team comprises of four friends who met through a coding program. We all wanted to create something that was meaningful to many people. When we observed a lot of students at our schools struggling to sell their used books, we decided to tackle the issue by creating this website. We hope you enjoy the site and the resources it offers, and we look forward to hooking you up with some books! Here’s a little bit about each of our team members:
+        </h5>
+        <h5 class="w3-padding-32">Aishwarya Shankar</h5>
+            <p class="w3-text-grey">Aishwarya Shankar is a senior at Irvington High School, Fremont. She loves programming! She also enjoys competing on her high school Speech Team and watching football in her free time (Go Panthers!!). Aishwarya is super excited about Book Hook and hopes you are too.
+            </p>
+        <h5 class="w3-padding-32">Sheryl Muttath</h5>
+            <p class="w3-text-grey">Sheryl Muttath is a junior at Aragon High School(Best School 10/10 would reccomend), San Mateo. She enjoys programming(does she?) and in her free time she likes to play soccer, read, draw, and take long walks by the beach(sike! That's too cliche).
+            </p>
+        <h5 class="w3-padding-32">Emma Kwan</h5>
+            <p class="w3-text-grey">Emma Kwan is a junior at Los Altos High School, Los Altos. She is new to programming but loves it already! In her free time, Emma enjoys public forum debate and writing for her school's newspaper, The Talon.
+            </p>
+        <h5 class="w3-padding-32">Rachel Liu</h5>
+            <p class="w3-text-grey">Rachel Liu is a senior at Leland High School, San Jose. She enjoys programming. In her free time, Rachel enjoys long walks by the beach and listening to music.
+            </p>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+</body>
+</html>

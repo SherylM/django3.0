@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% extends 'buytextbooks/base.html'%}
+  <title>{%block title %}Book Hook - Textbooks {% endblock %} </title>
+  <a href="home.html" class="w3-bar-item w3-button w3-hide-small {%block linktwo%} w3-padding-large w3-grey{% endblock %}">Buy textbooks</a>
+
+</head>
+<body>
+  <p class="w3-xlarge w3-center">{% block header%} All Textbooks {%endblock%}</p>
+  {%block body%}
+    <h1 class="w3-margin w3-jumbo w3-text-lime w3-center">Textbooks</h1>
+            {% if object_list %}
+              {% for textbook in object_list %}
+              <div style = " width: 50%; text-align:center; padding:15px; margin: 20px 100px 20px; 100px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"> >
+                  <img style = "width:50%" src="{{textbook.textbookimage.url}}">
+                  <h3>
+                      <button type ="button" style= "background-color: grey; display: inline-block;"><a style="color:white; text-decoration: none;" href = "{% url 'books:detailtextbook' textbook.id%}">{{textbook.textbooktitle}}</a></button>
+                  </h3>
+              </div>
+              {% endfor %}
+            {% endif  %}
+
+  {%endblock%}
+</body>
+</html>

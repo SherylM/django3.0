@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    	{% load staticfiles %}
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet"  href="home.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial|Roboto" >
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  		<title>{% block title %}{% endblock %}</title>
+
+
+        <div class = "w3-top">
+          <div class="w3-dark-grey w3-card-2 w3-large">
+          <!--{% url 'books:home' %} explanation:
+            books - is the name of the app
+            home - is the view-->
+          <!--Navbar-->
+              <a class="w3-left-align w3-bar-item w3-button w3-hide-small w3-padding-large {%block linkone%} w3-hover-lime{% endblock%}" href="{% url 'books:home' %}">Home</a>
+              <a class="w3-left-align w3-bar-item w3-button w3-hide-small w3-padding-large {%block linktwo%} w3-hover-lime{% endblock%}" href="{% url 'books:alltextbooks' %}">Buy Textbooks</a>
+              <a class="w3-left-align w3-bar-item w3-button w3-hide-small w3-padding-large {%block linkthree%} w3-hover-lime{% endblock%}" href="{% url 'books:allprepbooks' %}">Buy Prep Books</a>
+              <a class="w3-left-align w3-bar-item w3-button w3-hide-small w3-padding-large {%block linkfour%} w3-hover-lime{% endblock%}" href="{% url 'books:sell' %}">Sell Books</a>
+              <a class="w3-left-align w3-bar-item w3-button w3-hide-small w3-padding-large {%block linkfive%} w3-hover-lime{% endblock%}" href="{% url 'books:blog' %}">Blog</a>
+              <input type="button" class="w3-right w3-button w3-hide-small w3-padding-large {%block linksix%} w3-hover-lime{% endblock%}" onclick="location.href='{% url 'books:login'%}';" value="Login"/>
+              <input type="button" class ="w3-right w3-button w3-hide-small w3-padding-large {%block linkseven%} w3-hover-lime{% endblock%}" onclick="location.href='{% url 'books:signup'%}';" value="Sign Up"/>
+          </div>
+        </div>
+
+        <style>
+              body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+              .w3-bar, .w3-top, h1,button {font-family: "Questrial", sans-serif}
+              .fa-anchor,.fa-coffee {font-size:200px}
+
+              button {
+                  background-color: #ABDB25;
+                  color: white;
+                  padding: 14px 20px;
+                  margin: 8px 0;
+                  border: 3px solid white;
+                  cursor: pointer;
+                  width: 50%;
+                  display: inline-block;
+              }
+              a{
+                text-decoration: none;
+                color: white;
+
+              }
+              /* Full-width input fields */
+              input[type=text], input[type=password] {
+                  width: 100%;
+                  padding: 12px 20px;
+                  margin: 8px 0;
+                  display: inline-block;
+                  border: 1px solid #ccc;
+                  box-sizing: border-box;
+              }
+
+              /* Set a style for all buttons */
+              .search {
+                  background-color: #ABDB25;
+                  color: white;
+                  padding: 14px 20px;
+                  margin: 8px 0;
+                  border: none;
+                  cursor: pointer;
+                  width: 100%;
+              }
+
+              /* Extra styles for the cancel button */
+              .cancelbtn {
+                  padding: 14px 20px;
+                  background-color: #f44336;
+              }
+
+              /* Float cancel and signup buttons and add an equal width */
+              .cancelbtn,.signupbtn {
+                  float: left;
+                  width: 50%;
+              }
+
+              /* Add padding to container elements */
+              .container {
+                  padding: 16px;
+              }
+
+              /* Clear floats */
+              .clearfix::after {
+                  content: "";
+                  clear: both;
+                  display: table;
+              }
+
+              /* Change styles for cancel button and signup button on extra small screens */
+              @media screen and (max-width: 300px) {
+                  .cancelbtn, .signupbtn {
+                     width: 100%;
+                  }
+              }
+              .bgimg {
+                  background-image: url("https://s1.postimg.org/nnq5hawxb/book2.png");
+                  background-position: center;
+                  background-size: cover;
+                  min-height: 30%;}
+      </style>
+  </head>
+
+
+<body>
+      <!--Header-->
+      <header class="bgimg w3-container w3-center" style="padding:128px 16px">
+          <h1 class="w3-margin w3-jumbo w3-text-lime w3-center">Book Hook</h1>
+          <p class="w3-xlarge w3-center">{% block header%}Buy and sell Textbooks and Prepbooks!{%endblock%}</p>
+      </header>
+  {% block body %}
+  {% endblock %}
+      <!-- Footer -->
+      <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+          <p>Powered by <a style = "color:grey" href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+      </footer>
+
+
+</body>
+</html>
